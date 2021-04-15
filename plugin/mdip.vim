@@ -193,7 +193,7 @@ function! mdip#MarkdownClipboardImage()
         execute "normal! i\t\\centering\n"
         execute "normal! i\t\\includegraphics[width=0.4\\textwidth]{" . relpath . "}\n"
         execute "normal! i\t\\caption{caption}\n"
-        execute "normal! i\t\\label{label}\n"
+        execute "normal! i\t\\label{" . g:mdip_tmpname . "}\n"
         execute "normal! i\\end{figure}\n"
     endif
 endfunction
